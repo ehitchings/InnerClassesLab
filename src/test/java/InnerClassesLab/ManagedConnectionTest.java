@@ -30,4 +30,17 @@ public class ManagedConnectionTest {
         Assert.assertEquals("Protocol was not Doom", "DOOM", mc666.getProtocol());
     }
 
+    @Test
+    public void isClosed(){
+        Assert.assertEquals("Connection did not close correctly", "Connection is closed", mcFTP.close());
+        Assert.assertEquals("Connection is still open", false, mcFTP.getIsOpen());
+    }
+
+    @Test
+    public void connectTest(){
+        Assert.assertEquals("Connection did not report as open", "Connection established\n" + mcDOOM.toString(), mcDOOM.connect());
+    }
+
+
+
 }

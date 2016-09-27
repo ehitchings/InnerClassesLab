@@ -1,14 +1,102 @@
 package InnerClassesLab;
+import java.util.List;
+import java.util.ArrayList;
 
 /**
  * Created by evanhitchings on 9/27/16.
  */
 public class ConnectionManager {
 
+    private int maxConnections;
+    private int currentConnections;
+    private List<Connection> connections;
+
+    public ConnectionManager(int max){
+        this.maxConnections = max;
+        this.currentConnections = 0;
+        this.connections = new ArrayList<Connection>();
+    }
+
+    public ConnectionManager(){
+        this.maxConnections = 8;
+        this.currentConnections = 0;
+        this.connections = new ArrayList<Connection>();
+    }
+
+    public int getMaxConnections() {
+        return maxConnections;
+    }
+
+    public void setMaxConnections(int maxConnections) {
+        this.maxConnections = maxConnections;
+    }
+
+    public int getCurrentConnections() {
+        return currentConnections;
+    }
+
+    public void setCurrentConnections(int currentConnections) {
+        this.currentConnections = currentConnections;
+    }
+
+
+    public List<Connection> getConnections() {
+        return connections;
+    }
 
 
 
 
+
+
+    ///////////this is where you are currently working!!!!!!!
+    public Connection getConnection(String ip, String protocol){
+        if(connectionExists(ip)){
+            return connectionFromList(ip);
+        }
+        return null;
+
+    }
+
+    private Connection connectionFromList(String ip){
+        for(Connection con : connections){
+            if(con.getIP().equalsIgnoreCase(ip)){
+                return con;
+            }
+        }
+        return null;
+    }
+
+    private boolean connectionExists(String ip){
+        for(Connection con : connections){
+            if(con.getIP().equalsIgnoreCase(ip)){
+                return true;
+            }
+        }
+        return false;
+    }
+
+
+    private Connection createConnection(String ip, String protocol){
+        if (currentConnections >= maxConnections){
+            System.out.println("No available connections!");
+            return null;
+        }
+        ManagedConnection toReturn = new ManagedConnection(ip, protocol);
+        System.out.println(toReturn.connect());
+        return toReturn;
+    }
+
+    private Connection createConnection(String ip, int port){
+        if (currentConnections >= maxConnections){
+            System.out.println("No available connections!");
+            return null;
+        }
+        ManagedConnection toReturn = new ManagedConnection(ip, port);
+        System.out.println(toReturn.connect());
+        return toReturn;
+
+    }
 
     public class ManagedConnection implements Connection {
         private String ip;
@@ -70,6 +158,16 @@ public class ConnectionManager {
 
         }
 
+        @Override
+        public String toString(){
+            StringBuilder sb = new StringBuilder();
+            sb.append("IP: " + this.getIP() + "\n");
+            sb.append("Protocol: " + this.getProtocol() + "\n");
+            sb.append("Port: " + this.getPort());
+            return sb.toString();
+        }
+
+
 
         public String getIP(){
             return this.ip;
@@ -83,12 +181,25 @@ public class ConnectionManager {
             return this.port;
         }
 
+        public boolean getIsOpen(){
+            return this.isOpen;
+        }
+
         public String connect(){
-            return null;
+            if(this.isOpen){
+                currentConnections++;
+                return "Connection established\n" + this.toString();
+            }
+            return "Connection is closed";
         }
 
         public String close(){
-            return null;
+            currentConnections--;
+            this.isOpen = false;
+            this.port = 999999999;
+            this.ip = "999999999999";
+            this.protocol = "zzzzzzzzzzzz";
+            return this.connect();
         }
 
 
