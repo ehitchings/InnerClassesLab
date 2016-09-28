@@ -45,17 +45,20 @@ public class ConnectionManager {
     }
 
 
-
-
-
-
-    ///////////this is where you are currently working!!!!!!!
     public Connection getConnection(String ip, String protocol){
         if(connectionExists(ip)){
             return connectionFromList(ip);
         }
-        return null;
 
+        return createConnection(ip, protocol);
+
+    }
+
+    public Connection getConnection(String ip, int port){
+        if(connectionExists(ip)){
+            return connectionFromList(ip);
+        }
+        return createConnection(ip, port);
     }
 
     private Connection connectionFromList(String ip){
@@ -77,22 +80,24 @@ public class ConnectionManager {
     }
 
 
-    private Connection createConnection(String ip, String protocol){
+    public Connection createConnection(String ip, String protocol){
         if (currentConnections >= maxConnections){
             System.out.println("No available connections!");
             return null;
         }
         ManagedConnection toReturn = new ManagedConnection(ip, protocol);
+        connections.add(toReturn);
         System.out.println(toReturn.connect());
         return toReturn;
     }
 
-    private Connection createConnection(String ip, int port){
+    public Connection createConnection(String ip, int port){
         if (currentConnections >= maxConnections){
             System.out.println("No available connections!");
             return null;
         }
         ManagedConnection toReturn = new ManagedConnection(ip, port);
+        connections.add(toReturn);
         System.out.println(toReturn.connect());
         return toReturn;
 
