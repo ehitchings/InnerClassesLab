@@ -46,10 +46,17 @@ public class ManagedConnectionTest {
     @Test
     public void equalityTest(){
         ConnectionManager.ManagedConnection mcDOOM = new ConnectionManager(). new ManagedConnection("000.444.444.444", "DOOM");
-        ConnectionManager.ManagedConnection mcDOOM2 = new ConnectionManager(). new ManagedConnection("000.444.444.444", "DOOM");
+        ConnectionManager.ManagedConnection mcDOOM2 = new ConnectionManager(). new ManagedConnection(new String("000.444.444.444"), "DOOM");
         Assert.assertTrue("Identical objects did not return true", mcDOOM.equals(mcDOOM2));
         Connection con = new ConnectionManager(). new ManagedConnection("000.444.444.444", "DOOM");
         Assert.assertTrue("Identical ManagedConnections did not return true when one was passed as a Connection", mcDOOM.equals(con));
+    }
+
+    @Test
+    public void nullTest(){
+        ConnectionManager.ManagedConnection mcDOOM = new ConnectionManager(). new ManagedConnection(null, "DOOM");
+        ConnectionManager.ManagedConnection mcDOOM2 = new ConnectionManager(). new ManagedConnection(null, "DOOM");
+        Assert.assertTrue("Identical objects did not return true", mcDOOM.equals(mcDOOM2));
     }
 
 

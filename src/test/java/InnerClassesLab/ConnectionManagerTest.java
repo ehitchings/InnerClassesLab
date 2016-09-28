@@ -82,6 +82,27 @@ public class ConnectionManagerTest {
         Assert.assertEquals("Number of current connections did not decrease", 0, cm5.getCurrentConnections());
     }
 
+    @Test
+    public void reopenClosedConnectionTest(){
+        ConnectionManager cm6 = new ConnectionManager(2);
+        ConnectionManager.ManagedConnection mcDOOM = (ConnectionManager.ManagedConnection)cm6.getConnection("000.444.444.444", "DOOM");
+        mcDOOM.setOpen(false);
+        cm6.getConnection("000.444.444.444", "DOOM");
+        ConnectionManager.ManagedConnection toVerify = (ConnectionManager.ManagedConnection)cm6.getConnections().get(0);
+        Assert.assertTrue("Connection was not reopened", toVerify.getIsOpen());
+
+    }
+
+    @Test
+    public void isConnectionOpenTest(){
+        ConnectionManager cm6 = new ConnectionManager(2);
+        ConnectionManager.ManagedConnection mcDOOM = (ConnectionManager.ManagedConnection)cm6.getConnection("000.444.444.444", "DOOM");
+        //commented out because method is now private
+        //Assert.assertTrue("Connection did not report as open", cm6.isConnectionOpen(mcDOOM));
+        mcDOOM.setOpen(false);
+        //Assert.assertFalse("Connection did not report as open", cm6.isConnectionOpen(mcDOOM));
+    }
+
 
 
 }

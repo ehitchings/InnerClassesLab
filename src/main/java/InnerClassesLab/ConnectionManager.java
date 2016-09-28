@@ -121,24 +121,44 @@ public class ConnectionManager {
 //        return false;
 //    }
 
-    private Connection getActiveConnection(Connection con){
-        System.out.println("Connection is already active\n" + con);
-        return con;
+    private Connection getActiveConnection(Connection mc){
+        if(isConnectionOpen(mc)){
+            System.out.println("Connection is already active\n" + mc);
+            return mc;
+        }
+
+        return openClosedConnection(mc);
+
     }
 
-    private Connection connectConnection(Connection con){
+    private Connection openClosedConnection(Connection mc){
+        connections.remove(mc);
+        System.out.println("Reopening connection\n");
+        ManagedConnection mcToOpen = (ManagedConnection)mc;
+        return connectConnection(mcToOpen);
+    }
+
+    private boolean isConnectionOpen(Connection mc){
+        int index = connections.indexOf(mc);
+        ManagedConnection existingCon = (ManagedConnection)connections.get(index);
+        return(existingCon.isOpen);
+    }
+
+    private Connection connectConnection(Connection mc){
         if (currentConnections >= maxConnections) {
             System.out.println("No available connections!");
             return null;
         }
-        connections.add(con);
-        System.out.println(con.connect());
-        return con;
+        ManagedConnection mcToOpen = (ManagedConnection)mc;
+        mcToOpen.setOpen(true);
+        connections.add(mcToOpen);
+        System.out.println(mcToOpen.connect());
+        return mcToOpen;
 
     }
 
-    public void closeConnection(Connection con){
-        System.out.println(con.close());
+    public void closeConnection(Connection mc){
+        System.out.println(mc.close());
     }
 
 
@@ -166,9 +186,9 @@ public class ConnectionManager {
 //    }
 
     public class ManagedConnection implements Connection {
-        private String ip;
-        private String protocol;
-        private int port;
+        private final String ip;
+        private final String protocol;
+        private final int port;
         private boolean isOpen;
 
         public ManagedConnection(String ip, String protocol){
@@ -240,25 +260,40 @@ public class ConnectionManager {
         @Override
         public boolean equals(Object o) {
             if (this == o) return true;
-            if (!(o instanceof ManagedConnection)) return false;
-
+            if(!ManagedConnection.class.isAssignableFrom(o.getClass())){
+                return false;
+            }
+            //if (!(o instanceof ManagedConnection)) return false;
             ManagedConnection that = (ManagedConnection) o;
+            if (this.port != that.port) return false;
+            //commented out because I want to keep this field mutable
+            //if (isOpen != that.isOpen) return false;
 
-            if (getPort() != that.getPort()) return false;
-            if (isOpen != that.isOpen) return false;
-            if (!ip.equals(that.ip)) return false;
-            return getProtocol().equals(that.getProtocol());
 
+            //THIS CHECKS TO MAKE SURE THE VALUES AREN'T NULL BEFORE COMPARING THEM!
+            //I DIDN'T WANT TO IMPLEMENT IT THIS WAY, BUT IT LOOKED WAY MORE CONFUSING
+            //WHEN I TRIED TO IMPLEMENT IT DIFFERENTLY
+            if ((this.ip == null) ? (that.ip != null) : !this.ip.equals(that.ip)) {
+                return false;
+            }
+
+            if ((this.protocol == null) ? (that.protocol != null) : !this.protocol.equalsIgnoreCase(that.protocol)) {
+                return false;
+            }
+            return true;
         }
 
         @Override
         public int hashCode() {
-            int result = ip.hashCode();
-            result = 31 * result + getProtocol().hashCode();
-            result = 31 * result + getPort();
-            result = 31 * result + (isOpen ? 1 : 0);
+            int result = this.port;
+            //THIS IS TO AVOID A NULL POINTER EXCEPTION
+            result = 31 * result + (this.protocol != null ? protocol.hashCode() : 0);
+            result = 31 * result + (this.ip != null ? ip.hashCode() : 0);
+            //result = 31 * result + (isOpen ? 1 : 0); COMMENTED OUT BECAUSE ISOPEN IS A MUTABLE VALUE
             return result;
         }
+
+
 
         public String getIP(){
 
@@ -275,6 +310,10 @@ public class ConnectionManager {
 
         public boolean getIsOpen(){
             return this.isOpen;
+        }
+
+        public void setOpen(boolean open) {
+            isOpen = open;
         }
 
         public String connect(){
