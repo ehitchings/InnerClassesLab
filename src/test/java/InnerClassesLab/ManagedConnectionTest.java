@@ -34,11 +34,22 @@ public class ManagedConnectionTest {
     public void isClosed(){
         Assert.assertEquals("Connection did not close correctly", "Connection is closed", mcFTP.close());
         Assert.assertEquals("Connection is still open", false, mcFTP.getIsOpen());
+        Assert.assertEquals("Connection IP did return error message when closed", "Error: Connection is Closed", mcFTP.getIP());
+        Assert.assertEquals("Connection Port did not return invalid value when closed", -999999999, mcFTP.getPort());
     }
 
     @Test
     public void connectTest(){
         Assert.assertEquals("Connection did not report as open", "Connection established\n" + mcDOOM.toString(), mcDOOM.connect());
+    }
+
+    @Test
+    public void equalityTest(){
+        ConnectionManager.ManagedConnection mcDOOM = new ConnectionManager(). new ManagedConnection("000.444.444.444", "DOOM");
+        ConnectionManager.ManagedConnection mcDOOM2 = new ConnectionManager(). new ManagedConnection("000.444.444.444", "DOOM");
+        Assert.assertTrue("Identical objects did not return true", mcDOOM.equals(mcDOOM2));
+        Connection con = new ConnectionManager(). new ManagedConnection("000.444.444.444", "DOOM");
+        Assert.assertTrue("Identical ManagedConnections did not return true when one was passed as a Connection", mcDOOM.equals(con));
     }
 
 

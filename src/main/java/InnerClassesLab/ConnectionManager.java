@@ -7,6 +7,11 @@ import java.util.ArrayList;
  */
 public class ConnectionManager {
 
+//    This contains a lot of commented out code, left over from refactoring.
+//    I'm too paranoid and loss-averse to remove it, for fear of later discovering
+//    that my current implementation has a hole that my tests haven't spotted.
+//    This means you can see my thought process as I developed this, though. Enjoy.
+
     private int maxConnections;
     private int currentConnections;
     private List<Connection> connections;
@@ -45,65 +50,120 @@ public class ConnectionManager {
     }
 
 
-    public Connection getConnection(String ip, String protocol){
-        if(connectionExists(ip)){
-            System.out.println("Connection is already active\n" + connectionFromList(ip));
-            return connectionFromList(ip);
-        }
+//    public Connection getConnection(String ip, String protocol){
+//        if(connectionExists(ip)){
+//            System.out.println("Connection is already active\n" + connectionFromList(ip));
+//            return connectionFromList(ip);
+//        }
+//
+//        return createConnection(ip, protocol);
+//
+//    }
 
-        return createConnection(ip, protocol);
+    public Connection getConnection(String ip, String protocol){
+        ManagedConnection toComp = new ManagedConnection(ip, protocol);
+        return connections.contains(toComp) ? getActiveConnection(toComp) : connectConnection(toComp);
+
+        //if(connections.contains(toComp)){
+            //System.out.println("Connection is already active\n" + connectionFromList(ip));
+            //return connectionFromList(ip);
+            //System.out.println("Connection is already active\n" + toComp);
+            //return toComp;
+        //}
+
+        //return createConnection(ip, protocol);
 
     }
+
+
+//    public Connection getConnection(String ip, int port){
+//        if(connectionExists(ip)){
+//            System.out.println("Connection is already active\n" + connectionFromList(ip));
+//            return connectionFromList(ip);
+//        }
+//        return createConnection(ip, port);
+//    }
 
     public Connection getConnection(String ip, int port){
-        if(connectionExists(ip)){
-            System.out.println("Connection is already active\n" + connectionFromList(ip));
-            return connectionFromList(ip);
-        }
-        return createConnection(ip, port);
+        ManagedConnection toComp = new ManagedConnection(ip, port);
+        return connections.contains(toComp) ? getActiveConnection(toComp) : connectConnection(toComp);
+//        if(connections.contains(toComp)){
+//            System.out.println("Connection is already active\n" + connectionFromList(ip));
+//            return connectionFromList(ip);
+//            System.out.println("Connection is already active\n" + toComp);
+//            return toComp;
+//       }
+//        return createConnection(ip, port);
     }
 
-    private Connection connectionFromList(String ip){
-        for(Connection con : connections){
-            if(con.getIP().equalsIgnoreCase(ip)){
-                return con;
-            }
-        }
-        return null;
-    }
-
-    private boolean connectionExists(String ip){
-        for(Connection con : connections){
-            if(con.getIP().equalsIgnoreCase(ip)){
-                return true;
-            }
-        }
-        return false;
+    public Connection getConnection(String ip, String protocol, int port ){
+        ManagedConnection toComp = new ManagedConnection(ip, protocol, port);
+        return connections.contains(toComp) ? getActiveConnection(toComp) : connectConnection(toComp);
     }
 
 
-    public Connection createConnection(String ip, String protocol){
-        if (currentConnections >= maxConnections){
+
+//    private Connection connectionFromList(String ip){
+//        for(Connection con : connections){
+//            if(con.getIP().equalsIgnoreCase(ip)){
+//                return con;
+//            }
+//        }
+//        return null;
+//    }
+//
+//    private boolean connectionExists(String ip){
+//        for(Connection con : connections){
+//            if(con.getIP().equalsIgnoreCase(ip)){
+//                return true;
+//            }
+//        }
+//        return false;
+//    }
+
+    private Connection getActiveConnection(Connection con){
+        System.out.println("Connection is already active\n" + con);
+        return con;
+    }
+
+    private Connection connectConnection(Connection con){
+        if (currentConnections >= maxConnections) {
             System.out.println("No available connections!");
             return null;
         }
-        ManagedConnection toReturn = new ManagedConnection(ip, protocol);
-        connections.add(toReturn);
-        System.out.println(toReturn.connect());
-        return toReturn;
-    }
-
-    public Connection createConnection(String ip, int port){
-        if (currentConnections >= maxConnections){
-            System.out.println("No available connections!");
-            return null;
-        }
-        ManagedConnection toReturn = new ManagedConnection(ip, port);
-        connections.add(toReturn);
-        System.out.println(toReturn.connect());
-        return toReturn;
+        connections.add(con);
+        System.out.println(con.connect());
+        return con;
 
     }
+
+    public void closeConnection(Connection con){
+        System.out.println(con.close());
+    }
+
+
+//    public Connection createConnection(String ip, String protocol){
+//        if (currentConnections >= maxConnections){
+//            System.out.println("No available connections!");
+//            return null;
+//        }
+//        ManagedConnection toReturn = new ManagedConnection(ip, protocol);
+//        connections.add(toReturn);
+//        System.out.println(toReturn.connect());
+//        return toReturn;
+//    }
+//
+//    public Connection createConnection(String ip, int port){
+//        if (currentConnections >= maxConnections){
+//            System.out.println("No available connections!");
+//            return null;
+//        }
+//        ManagedConnection toReturn = new ManagedConnection(ip, port);
+//        connections.add(toReturn);
+//        System.out.println(toReturn.connect());
+//        return toReturn;
+//
+//    }
 
     public class ManagedConnection implements Connection {
         private String ip;
@@ -125,6 +185,13 @@ public class ConnectionManager {
             this.port = port;
             this.isOpen = true;
 
+        }
+
+        public ManagedConnection(String ip, String protocol, int port){
+            this.ip = ip;
+            this.protocol = protocol;
+            this.port = port;
+            this.isOpen = true;
         }
 
 
@@ -159,10 +226,6 @@ public class ConnectionManager {
                 default:
                     return "HTML";
             }
-
-
-
-
         }
 
         @Override
@@ -174,10 +237,32 @@ public class ConnectionManager {
             return sb.toString();
         }
 
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (!(o instanceof ManagedConnection)) return false;
 
+            ManagedConnection that = (ManagedConnection) o;
+
+            if (getPort() != that.getPort()) return false;
+            if (isOpen != that.isOpen) return false;
+            if (!ip.equals(that.ip)) return false;
+            return getProtocol().equals(that.getProtocol());
+
+        }
+
+        @Override
+        public int hashCode() {
+            int result = ip.hashCode();
+            result = 31 * result + getProtocol().hashCode();
+            result = 31 * result + getPort();
+            result = 31 * result + (isOpen ? 1 : 0);
+            return result;
+        }
 
         public String getIP(){
-            return this.ip;
+
+            return this.isOpen ? this.ip : "Error: Connection is Closed";
         }
 
         public String getProtocol(){
@@ -185,7 +270,7 @@ public class ConnectionManager {
         }
 
         public int getPort(){
-            return this.port;
+            return this.isOpen ? this.port : -999999999;
         }
 
         public boolean getIsOpen(){
@@ -193,6 +278,7 @@ public class ConnectionManager {
         }
 
         public String connect(){
+
             if(this.isOpen){
                 currentConnections++;
                 return "Connection established\n" + this.toString();
@@ -203,9 +289,6 @@ public class ConnectionManager {
         public String close(){
             currentConnections--;
             this.isOpen = false;
-            this.port = 999999999;
-            this.ip = "999999999999";
-            this.protocol = "zzzzzzzzzzzz";
             return this.connect();
         }
 

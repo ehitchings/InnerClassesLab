@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8064ab95-ed5d-425d-a403-ca8d14b57528" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/InnerClassesLab (1).xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/InnerClassesLab/ConnectionManager.java" afterPath="$PROJECT_DIR$/src/main/java/InnerClassesLab/ConnectionManager.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/InnerClassesLab/ConnectionManagerTest.java" afterPath="$PROJECT_DIR$/src/test/java/InnerClassesLab/ConnectionManagerTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/InnerClassesLab/ManagedConnectionTest.java" afterPath="$PROJECT_DIR$/src/test/java/InnerClassesLab/ManagedConnectionTest.java" />
     </list>
     <ignored path="InnerClassesLab.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -50,42 +52,48 @@
       <file leaf-file-name="Connection.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/InnerClassesLab/Connection.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="10" selection-end-column="19" />
+            <state relative-caret-position="120">
+              <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ConnectionManager.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ConnectionManager.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/InnerClassesLab/ConnectionManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="960">
-              <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+            <state relative-caret-position="2160">
+              <caret line="290" column="32" selection-start-line="290" selection-start-column="32" selection-end-line="290" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#644#645#0" expanded="true" />
-                <element signature="e#681#682#0" expanded="true" />
-                <element signature="e#738#739#0" expanded="true" />
-                <element signature="e#790#791#0" expanded="true" />
-                <element signature="e#832#833#0" expanded="true" />
-                <element signature="e#873#874#0" expanded="true" />
-                <element signature="e#938#939#0" expanded="true" />
-                <element signature="e#998#999#0" expanded="true" />
-                <element signature="e#1047#1048#0" expanded="true" />
-                <element signature="e#1081#1082#0" expanded="true" />
-                <element signature="e#4955#4956#0" expanded="true" />
-                <element signature="e#4997#4998#0" expanded="true" />
+                <element signature="e#968#969#0" expanded="true" />
+                <element signature="e#1005#1006#0" expanded="true" />
+                <element signature="e#1062#1063#0" expanded="true" />
+                <element signature="e#1114#1115#0" expanded="true" />
+                <element signature="e#1156#1157#0" expanded="true" />
+                <element signature="e#1197#1198#0" expanded="true" />
+                <element signature="e#1262#1263#0" expanded="true" />
+                <element signature="e#1322#1323#0" expanded="true" />
+                <element signature="e#1371#1372#0" expanded="true" />
+                <element signature="e#1405#1406#0" expanded="true" />
+                <element signature="e#4466#4467#0" expanded="true" />
+                <element signature="e#4513#4514#0" expanded="true" />
+                <element signature="e#8243#8244#0" expanded="true" />
+                <element signature="e#8287#8288#0" expanded="true" />
+                <element signature="e#8318#8319#0" expanded="true" />
+                <element signature="e#8385#8386#0" expanded="true" />
+                <element signature="e#8422#8423#0" expanded="true" />
+                <element signature="e#8464#8465#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ConnectionManagerTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ConnectionManagerTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/InnerClassesLab/ConnectionManagerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="293">
-              <caret line="54" column="72" selection-start-line="54" selection-start-column="72" selection-end-line="54" selection-end-column="72" />
+            <state relative-caret-position="308">
+              <caret line="81" column="110" selection-start-line="81" selection-start-column="110" selection-end-line="81" selection-end-column="110" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -96,8 +104,8 @@
       <file leaf-file-name="ManagedConnectionTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/InnerClassesLab/ManagedConnectionTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="70" selection-start-line="24" selection-start-column="70" selection-end-line="24" selection-end-column="70" />
+            <state relative-caret-position="98">
+              <caret line="37" column="115" selection-start-line="37" selection-start-column="115" selection-end-line="37" selection-end-column="115" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1377#1378#0" expanded="true" />
@@ -131,10 +139,10 @@
         <option value="$PROJECT_DIR$/src/main/java/InnerClassesLab/InnerClassesLab.java" />
         <option value="$PROJECT_DIR$/src/main/java/InnerClassesLab/Connection.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/InnerClassesLab/ManagedConnectionTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/InnerClassesLab/ConnectonManagerTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/InnerClassesLab/ConnectionManager.java" />
         <option value="$PROJECT_DIR$/src/test/java/InnerClassesLab/ConnectionManagerTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/InnerClassesLab/ManagedConnectionTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/InnerClassesLab/ConnectionManager.java" />
       </list>
     </option>
   </component>
@@ -295,8 +303,8 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
-  <component name="RunManager" selected="JUnit.ConnectionManagerTest.getConnectionPortTest">
-    <configuration default="false" name="ManagedConnectionTest.connectTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.ManagedConnectionTest">
+    <configuration default="false" name="ManagedConnectionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="InnerClassesLab.*" />
@@ -308,7 +316,59 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="InnerClassesLab" />
       <option name="MAIN_CLASS_NAME" value="InnerClassesLab.ManagedConnectionTest" />
-      <option name="METHOD_NAME" value="connectTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="ConnectionManagerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="InnerClassesLab.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="InnerClassesLab" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="InnerClassesLab" />
+      <option name="MAIN_CLASS_NAME" value="InnerClassesLab.ConnectionManagerTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="ConnectionManagerTest.getConnectionAllTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="InnerClassesLab.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="InnerClassesLab" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="InnerClassesLab" />
+      <option name="MAIN_CLASS_NAME" value="InnerClassesLab.ConnectionManagerTest" />
+      <option name="METHOD_NAME" value="getConnectionAllTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -322,7 +382,7 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="ConnectionManagerTest.createConnectionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="ConnectionManagerTest.closeConnectionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="InnerClassesLab.*" />
@@ -334,7 +394,7 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="InnerClassesLab" />
       <option name="MAIN_CLASS_NAME" value="InnerClassesLab.ConnectionManagerTest" />
-      <option name="METHOD_NAME" value="createConnectionTest" />
+      <option name="METHOD_NAME" value="closeConnectionTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -348,7 +408,7 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="ConnectionManagerTest.createConnectionPortTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="ManagedConnectionTest.isClosed" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="InnerClassesLab.*" />
@@ -359,60 +419,8 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="InnerClassesLab" />
-      <option name="MAIN_CLASS_NAME" value="InnerClassesLab.ConnectionManagerTest" />
-      <option name="METHOD_NAME" value="createConnectionPortTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="ConnectionManagerTest.getConnectionProtocolTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="InnerClassesLab.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="InnerClassesLab" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="InnerClassesLab" />
-      <option name="MAIN_CLASS_NAME" value="InnerClassesLab.ConnectionManagerTest" />
-      <option name="METHOD_NAME" value="getConnectionProtocolTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="ConnectionManagerTest.getConnectionPortTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="InnerClassesLab.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="InnerClassesLab" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="InnerClassesLab" />
-      <option name="MAIN_CLASS_NAME" value="InnerClassesLab.ConnectionManagerTest" />
-      <option name="METHOD_NAME" value="getConnectionPortTest" />
+      <option name="MAIN_CLASS_NAME" value="InnerClassesLab.ManagedConnectionTest" />
+      <option name="METHOD_NAME" value="isClosed" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -834,19 +842,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.ManagedConnectionTest.connectTest" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.ConnectionManagerTest.createConnectionTest" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.ConnectionManagerTest.createConnectionPortTest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.ConnectionManagerTest.getConnectionProtocolTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.ConnectionManagerTest.getConnectionPortTest" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.ManagedConnectionTest" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.ConnectionManagerTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.ConnectionManagerTest.getConnectionAllTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.ConnectionManagerTest.closeConnectionTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.ManagedConnectionTest.isClosed" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.ConnectionManagerTest.getConnectionPortTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.ConnectionManagerTest.getConnectionProtocolTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.ConnectionManagerTest.createConnectionPortTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.ConnectionManagerTest.createConnectionTest" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.ManagedConnectionTest.connectTest" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.ManagedConnectionTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.ManagedConnectionTest.isClosed" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.ConnectionManagerTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.ConnectionManagerTest.closeConnectionTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.ConnectionManagerTest.getConnectionAllTest" />
       </list>
     </recent_temporary>
   </component>
@@ -860,48 +868,48 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1475001374655</updated>
-      <workItem from="1475001375936" duration="11583000" />
+      <workItem from="1475001375936" duration="19558000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ConnectionManagerTest_createConnectionPortTest - 2016.09.27 at 20h 55m 08s.xml">
-      <configuration name="ConnectionManagerTest.createConnectionPortTest" configurationId="JUnit" />
+    <history-entry file="ConnectionManagerTest - 2016.09.28 at 12h 06m 17s.xml">
+      <configuration name="ConnectionManagerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConnectionManagerTest_createConnectionTest - 2016.09.27 at 20h 49m 50s.xml">
-      <configuration name="ConnectionManagerTest.createConnectionTest" configurationId="JUnit" />
+    <history-entry file="ConnectionManagerTest - 2016.09.28 at 13h 05m 18s.xml">
+      <configuration name="ConnectionManagerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConnectionManagerTest_createConnectionTest - 2016.09.27 at 20h 52m 08s.xml">
-      <configuration name="ConnectionManagerTest.createConnectionTest" configurationId="JUnit" />
+    <history-entry file="ConnectionManagerTest_closeConnectionTest - 2016.09.28 at 12h 57m 45s.xml">
+      <configuration name="ConnectionManagerTest.closeConnectionTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConnectionManagerTest_getConnectionPortTest - 2016.09.28 at 07h 24m 52s.xml">
-      <configuration name="ConnectionManagerTest.getConnectionPortTest" configurationId="JUnit" />
+    <history-entry file="ConnectionManagerTest_getConnectionAllTest - 2016.09.28 at 12h 44m 45s.xml">
+      <configuration name="ConnectionManagerTest.getConnectionAllTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConnectionManagerTest_getConnectionProtocolTest - 2016.09.28 at 07h 16m 09s.xml">
-      <configuration name="ConnectionManagerTest.getConnectionProtocolTest" configurationId="JUnit" />
+    <history-entry file="ManagedConnectionTest - 2016.09.28 at 12h 03m 29s.xml">
+      <configuration name="ManagedConnectionTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConnectionManagerTest_getConnectionProtocolTest - 2016.09.28 at 07h 17m 01s.xml">
-      <configuration name="ConnectionManagerTest.getConnectionProtocolTest" configurationId="JUnit" />
+    <history-entry file="ManagedConnectionTest - 2016.09.28 at 12h 06m 22s.xml">
+      <configuration name="ManagedConnectionTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConnectionManagerTest_getConnectionProtocolTest - 2016.09.28 at 07h 18m 34s.xml">
-      <configuration name="ConnectionManagerTest.getConnectionProtocolTest" configurationId="JUnit" />
+    <history-entry file="ManagedConnectionTest - 2016.09.28 at 13h 05m 24s.xml">
+      <configuration name="ManagedConnectionTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConnectionManagerTest_getConnectionProtocolTest - 2016.09.28 at 07h 19m 33s.xml">
-      <configuration name="ConnectionManagerTest.getConnectionProtocolTest" configurationId="JUnit" />
+    <history-entry file="ManagedConnectionTest - 2016.09.28 at 13h 08m 54s.xml">
+      <configuration name="ManagedConnectionTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConnectionManagerTest_getConnectionProtocolTest - 2016.09.28 at 07h 20m 05s.xml">
-      <configuration name="ConnectionManagerTest.getConnectionProtocolTest" configurationId="JUnit" />
+    <history-entry file="ManagedConnectionTest_isClosed - 2016.09.28 at 13h 00m 49s.xml">
+      <configuration name="ManagedConnectionTest.isClosed" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConnectionManagerTest_getConnectionProtocolTest - 2016.09.28 at 07h 22m 53s.xml">
-      <configuration name="ConnectionManagerTest.getConnectionProtocolTest" configurationId="JUnit" />
+    <history-entry file="ManagedConnectionTest_isClosed - 2016.09.28 at 13h 08m 50s.xml">
+      <configuration name="ManagedConnectionTest.isClosed" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11583000" />
+    <option name="totallyTimeSpent" value="19558000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="40" y="70" width="1846" height="896" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -910,13 +918,14 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3283582" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283582" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16075388" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16075388" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -926,7 +935,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -977,14 +985,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/InnerClassesLab/InnerClassesLab.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -995,38 +995,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/InnerClassesLab/Connection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="10" selection-end-column="19" />
+        <state relative-caret-position="120">
+          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/InnerClassesLab/ConnectionManager.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/InnerClassesLab/InnerClassesLab.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="960">
-          <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+        <state relative-caret-position="105">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/InnerClassesLab/ConnectionManagerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="81" column="110" selection-start-line="81" selection-start-column="110" selection-end-line="81" selection-end-column="110" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#644#645#0" expanded="true" />
-            <element signature="e#681#682#0" expanded="true" />
-            <element signature="e#738#739#0" expanded="true" />
-            <element signature="e#790#791#0" expanded="true" />
-            <element signature="e#832#833#0" expanded="true" />
-            <element signature="e#873#874#0" expanded="true" />
-            <element signature="e#938#939#0" expanded="true" />
-            <element signature="e#998#999#0" expanded="true" />
-            <element signature="e#1047#1048#0" expanded="true" />
-            <element signature="e#1081#1082#0" expanded="true" />
-            <element signature="e#4955#4956#0" expanded="true" />
-            <element signature="e#4997#4998#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/InnerClassesLab/ManagedConnectionTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="70" selection-start-line="24" selection-start-column="70" selection-end-line="24" selection-end-column="70" />
+        <state relative-caret-position="98">
+          <caret line="37" column="115" selection-start-line="37" selection-start-column="115" selection-end-line="37" selection-end-column="115" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1377#1378#0" expanded="true" />
@@ -1035,12 +1031,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/InnerClassesLab/ConnectionManagerTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/InnerClassesLab/ConnectionManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="54" column="72" selection-start-line="54" selection-start-column="72" selection-end-line="54" selection-end-column="72" />
+        <state relative-caret-position="2160">
+          <caret line="290" column="32" selection-start-line="290" selection-start-column="32" selection-end-line="290" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#968#969#0" expanded="true" />
+            <element signature="e#1005#1006#0" expanded="true" />
+            <element signature="e#1062#1063#0" expanded="true" />
+            <element signature="e#1114#1115#0" expanded="true" />
+            <element signature="e#1156#1157#0" expanded="true" />
+            <element signature="e#1197#1198#0" expanded="true" />
+            <element signature="e#1262#1263#0" expanded="true" />
+            <element signature="e#1322#1323#0" expanded="true" />
+            <element signature="e#1371#1372#0" expanded="true" />
+            <element signature="e#1405#1406#0" expanded="true" />
+            <element signature="e#4466#4467#0" expanded="true" />
+            <element signature="e#4513#4514#0" expanded="true" />
+            <element signature="e#8243#8244#0" expanded="true" />
+            <element signature="e#8287#8288#0" expanded="true" />
+            <element signature="e#8318#8319#0" expanded="true" />
+            <element signature="e#8385#8386#0" expanded="true" />
+            <element signature="e#8422#8423#0" expanded="true" />
+            <element signature="e#8464#8465#0" expanded="true" />
           </folding>
         </state>
       </provider>
