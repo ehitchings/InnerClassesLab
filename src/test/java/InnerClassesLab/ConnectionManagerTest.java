@@ -26,4 +26,36 @@ public class ConnectionManagerTest {
     public void createConnectionPortTest(){
         Assert.assertEquals("Connection was not created (Port)", cm.createConnection("000.444.444.444", 666), cm.getConnections().get(0));
     }
+
+    @Test
+    public void getConnectionProtocolTest(){
+        ConnectionManager cm2 = new ConnectionManager(2);
+        Connection con = cm2.getConnection("000.111.111.111", "FTP");
+        Assert.assertEquals("Number of current connections was not increased", 1, cm2.getCurrentConnections());
+        Connection conTheSame = cm2.getConnection("000.111.111.111", "FTP");
+        Assert.assertEquals("Number of current connections was increased when it shouldn't have been", 1, cm2.getCurrentConnections());
+        Connection conNew = cm2.getConnection("000.444.444.444", "DOOM");
+        Assert.assertEquals("Number of current connections was not increased to 2", 2, cm2.getCurrentConnections());
+        Connection conTheThird = cm2.getConnection("000.333.333.333", "SSH");
+        Assert.assertEquals("New Connection was created despite no available connections", 2, cm2.getCurrentConnections());
+        Assert.assertEquals("New Connection was added to the list despite no available connections", 2, cm2.getConnections().size());
+
+
+    }
+
+    @Test
+    public void getConnectionPortTest(){
+        ConnectionManager cm3 = new ConnectionManager(2);
+        Connection con = cm3.getConnection("000.111.111.111", 20);
+        Assert.assertEquals("Number of current connections was not increased", 1, cm3.getCurrentConnections());
+        Connection conTheSame = cm3.getConnection("000.111.111.111", 20);
+        Assert.assertEquals("Number of current connections was increased when it shouldn't have been", 1, cm3.getCurrentConnections());
+        Connection conNew = cm3.getConnection("000.444.444.444", 666);
+        Assert.assertEquals("Number of current connections was not increased to 2", 2, cm3.getCurrentConnections());
+        Connection conTheThird = cm3.getConnection("000.333.333.333", 22);
+        Assert.assertEquals("New Connection was created despite no available connections", 2, cm3.getCurrentConnections());
+        Assert.assertEquals("New Connection was added to the list despite no available connections", 2, cm3.getConnections().size());
+
+    }
+
 }

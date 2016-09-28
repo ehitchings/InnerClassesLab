@@ -47,6 +47,7 @@ public class ConnectionManager {
 
     public Connection getConnection(String ip, String protocol){
         if(connectionExists(ip)){
+            System.out.println("Connection is already active\n" + connectionFromList(ip));
             return connectionFromList(ip);
         }
 
@@ -56,6 +57,7 @@ public class ConnectionManager {
 
     public Connection getConnection(String ip, int port){
         if(connectionExists(ip)){
+            System.out.println("Connection is already active\n" + connectionFromList(ip));
             return connectionFromList(ip);
         }
         return createConnection(ip, port);
